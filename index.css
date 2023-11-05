@@ -1,0 +1,392 @@
+/* Fuentes de texto */
+@font-face {
+    font-family: Valorant;
+    src: url(ValorantFont.ttf);
+}
+
+@font-face {
+    font-family: Auber;
+    src: url(AuberCFSemiBold-SemiBold.ttf)
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Light.ttf)
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(Oswald-VariableFont_wght.ttf)
+}
+
+/* Variables CSS */
+:root {
+
+    /* CSS HEX (Colores)*/
+
+    --database_managment: var(--imperial-red);
+    --imperial-red: #f94144ff;
+
+    --si: var(--orange-crayola);
+    --orange-crayola: #f3722cff;
+
+    --fol: var(--carrot-orange);
+    --carrot-orange: #f8961eff;
+
+    --entorns: var(--saffron);
+    --saffron: #f9c74fff;
+
+    --programacio: var(--pistachio);
+    --pistachio: #90be6dff;
+
+    --LLM: var(--zomp);
+    --zomp: #43aa8bff;
+
+    --general: var(--paynes-gray);
+    --paynes-gray: #577590ff;
+}
+
+/* Hovers asginaturas*/
+
+.databasemanagment:hover {
+    background-color: rgb(243, 103, 173);
+    font-size: 18pt;
+}
+
+.databasemanagment:hover~.databasemanagment {
+
+    /* Al utilizar la regla .box:hover ~ .box, le estoy diciendo a CSS
+    que cambie el fondo de otros divs con la clase .box que estén
+    después del div en el que se ha hecho hover. */
+
+    background-color: rgb(243, 103, 173);
+    font-size: 18pt;
+}
+
+.entorns:hover {
+    background-color: rgb(246, 232, 100);
+    font-size: 17pt;
+}
+
+.entorns:hover~.entorns {
+    background-color: rgb(246, 232, 100);
+    font-size: 17pt;
+}
+
+.fol:hover {
+    background-color: rgb(142, 170, 245);
+    color: rgb(142, 170, 245);
+    font-size: 18pt;
+}
+
+.programacio:hover {
+    background-color: rgb(195, 183, 47);
+    font-size: 18pt;
+}
+
+.programacio:hover~.programacio {
+    background-color: rgb(195, 183, 47);
+    font-size: 18pt;
+}
+
+.llenguatge:hover {
+    background-color: rgb(83, 214, 214);
+    font-size: 18pt;
+}
+
+.llenguatge:hover~.llenguatge {
+    background-color: rgb(83, 214, 214);
+    font-size: 18pt;
+}
+
+.si:hover {
+    background-color: orangered;
+    font-size: 18pt;
+}
+
+.si:hover~.si {
+    background-color: orangered;
+    font-size: 18pt;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Valorant, Oswald;
+}
+
+/* Tamaño imagen Pau casesnoves */
+.container img {
+    float: left;
+    width: 200pt;
+    height: 200pt;
+}
+
+/* Configuraciones Body */
+
+body {
+
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    /* Esto es para alinear el div verticalmente a la altura de la pantalla */
+    align-items: center;
+    /* Color gradiente fondo */
+    background: hsla(312, 77%, 86%, 1);
+    background: -webkit-linear-gradient(90deg, hsla(312, 77%, 86%, 1) 0%, hsla(220, 61%, 79%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(312, 77%, 86%, 1) 0%, hsla(220, 61%, 79%, 1) 100%);
+    background: linear-gradient(90deg, hsla(312, 77%, 86%, 1) 0%, hsla(220, 61%, 79%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F7C0EC", endColorstr="#A7BDEA", GradientType=1);
+}
+
+body>div:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 100px repeat(5, 180px);
+    grid-template-rows: 40px repeat(6, 100px);
+    grid-auto-flow: column;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    padding: 2pt;
+    color: #FFF;
+    font-weight: bold;
+    position: relative;
+    border-radius: 1%;
+    margin: 2%;
+    font-size: larger;
+}
+
+body>div:nth-of-type(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+            red, blue, deeppink, blue,
+            red, blue, deeppink, blue);
+    background-size: 800%;
+    border-radius: 1px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5%;
+    margin: 1pt;
+    font-family: Auber, Roboto;
+    color: black;
+}
+
+/* Colores Horas y días */
+div>div:nth-of-type(1),
+div>div:nth-of-type(2),
+div>div:nth-of-type(3),
+div>div:nth-of-type(4),
+div>div:nth-of-type(5),
+div>div:nth-of-type(6),
+div>div:nth-of-type(7),
+div>div:nth-of-type(8),
+div>div:nth-of-type(11),
+div>div:nth-of-type(15),
+div>div:nth-of-type(19),
+div>div:nth-of-type(23) {
+    background-color: var(--general);
+    color: white;
+}
+
+/*Aqui se pone la primera casilla de programación en 3 horas, y se añade color a programación(etc...)*/
+
+/* Lunes */
+div>div:nth-of-type(9) {
+    grid-row-end: span 3;
+    background-color: var(--programacio);
+}
+
+div>div:nth-of-type(10) {
+    grid-row-end: span 3;
+    background-color: var(--database_managment);
+}
+
+/* Martes */
+div>div:nth-of-type(12) {
+    grid-row-end: span 3;
+    background-color: var(--fol);
+}
+
+div>div:nth-of-type(13) {
+    grid-row-end: span 1;
+    background-color: var(--database_managment);
+}
+
+div>div:nth-of-type(14) {
+    grid-row-end: span 2;
+    background-color: var(--entorns);
+}
+
+/* Miércoles */
+div>div:nth-of-type(16) {
+    grid-row-end: span 2;
+    background-color: var(--LLM);
+}
+
+div>div:nth-of-type(17) {
+    grid-row-end: span 2;
+    background-color: var(--programacio);
+}
+
+div>div:nth-of-type(18) {
+    grid-row-end: span 2;
+    background-color: var(--database_managment);
+}
+
+/* Jueves */
+div>div:nth-of-type(20) {
+    grid-row-end: span 2;
+    background-color: var(--si);
+}
+
+div>div:nth-of-type(21) {
+    grid-row-end: span 2;
+    background-color: var(--database_managment);
+}
+
+div>div:nth-of-type(22) {
+    grid-row-end: span 2;
+    background-color: var(--programacio);
+}
+
+/* Viernes */
+div>div:nth-of-type(24) {
+    grid-row-end: span 1;
+    background-color: var(--entorns);
+}
+
+div>div:nth-of-type(25) {
+    grid-row-end: span 2;
+    background-color: var(--LLM);
+}
+
+div>div:nth-of-type(26) {
+    grid-row-end: span 3;
+    background-color: var(--si);
+}
+
+a {
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    font-family: Auber, Oswald, Roboto;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+
+/*Jimmi*/
+.fol {
+    position: relative;
+    overflow: hidden;
+}
+
+.fol img {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* Inicialmente, la imagen está fuera del div a la derecha */
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: left 0.3s;
+    /* Agrega una transición para suavizar el efecto */
+}
+
+.fol:hover img {
+    left: 0;
+    /* Al pasar el mouse por encima, la imagen se desliza desde la derecha hacia el interior del div */
+}
+
+.fol:hover::before {
+    opacity: 1;
+    /* Al pasar el mouse por encima del div, la imagen sobrescrita se hace visible */
+}
+
+/*Quitar subrallado en el boton Raül Lama*/
+a {
+    text-decoration: none;
+}
+
+/**/
+.etiqueta {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.etiqueta .etiquetatexto {
+    visibility: hidden;
+    width: 400px;
+    height: 100px;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 240%;
+    /* Coloca el tooltip encima del enlace */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.etiqueta:hover .etiquetatexto {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
